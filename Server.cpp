@@ -87,7 +87,7 @@ void User::save(ofstream& file){
 }
 
 void Server::init(){
-    ifstream ulist("userlist");
+    ifstream ulist("~/.rvsh/userlist");
     int id, num_p;
     int permission[1024];
     char u[129], p[129];
@@ -114,7 +114,7 @@ void Server::init(){
             cout<<"\t- "<<(*i)->getUsername()<<endl;
         }
     }
-    ifstream hlist("hostlist");
+    ifstream hlist("~/.rvsh/hostlist");
     int hid;
     char name[129];
     if(hlist){
