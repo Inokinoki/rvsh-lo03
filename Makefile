@@ -1,5 +1,6 @@
+prefix=/usr/local
+
 all: rvsh RVSHServer
-	rm *.o	
 
 rvsh: main.o Command.o Session.o
 	g++ main.o Command.o Session.o -lreadline -o rvsh
@@ -19,10 +20,12 @@ Command.o: Session.h Command.h Command.cpp
 Session.o: Session.h Command.h Session.cpp
 	g++ -c Session.cpp -o Session.o
 
-clean:
-	rm *.o
+clean: rvsh RVSHServer
+	rm *.o rvsh RVSHServer
 
-
+install:
+	install rvsh $(DESTDIR)$(prefix)/bin
+	install RVSHServer $(DESTDIR)$(prefix)/bin
 
 .PHONY: clean
 
