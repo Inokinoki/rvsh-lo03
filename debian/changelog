@@ -1,0 +1,5 @@
+rvsh (1.0-1) UNRELEASED; urgency=medium
+
+  * Initial release. (Closes: #XXXXXX)
+
+ -- inoki <inoki@debian-dev>  Tue, 02 Apr 2019 14:10:01 -0400

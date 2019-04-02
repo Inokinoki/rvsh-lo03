@@ -1,0 +1,9 @@
+Source: rvsh
+Maintainer: Inoki <veyx.shaw@gmail.com>
+Priority: optional
+Build-Depends:
+
+Package: rvsh
+Architecture: any
+Depends:
+Description: Virtual Network Shell
